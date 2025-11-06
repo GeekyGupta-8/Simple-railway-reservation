@@ -1,5 +1,4 @@
-use computer_project;
-
+-- use database_name;
 
 CREATE TABLE trains (
     train_name varchar(255) UNIQUE,
@@ -8,8 +7,6 @@ CREATE TABLE trains (
     fare DECIMAL(5,2),
     seats int DEFAULT 100
 );
-
-SELECT train_name, seats FROM trains WHERE seats > 0;
     
 INSERT INTO trains (train_name, destination, train_status, fare, seats) VALUES
 ("Vande Bharat Express", "Delhi", "On time", "100.00", "120"),
@@ -17,8 +14,6 @@ INSERT INTO trains (train_name, destination, train_status, fare, seats) VALUES
 ("Shatabdi Express", "Varanasi", "On time", "300.00", "150"),
 ("Duronto Express", "Chennai", "Delayed", "320.00", "250");
 
-DROP TABLE trains;
---Putting some values for trains
 CREATE TABLE bookings (
     pnr BIGINT UNIQUE,
     username VARCHAR(50),
@@ -30,8 +25,3 @@ CREATE TABLE bookings (
     booking_date DATE,
     boarding_date DATE
 );
-
-DROP TABLE bookings;
-
-SELECT * FROM trains;
-SELECT * FROM bookings;
