@@ -7,8 +7,8 @@ import datetime
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="1234", 
-    database="computer_project"
+    password="****", 
+    database="database_name"
 )
 
 cur = db.cursor()
@@ -150,5 +150,6 @@ while(quit != True):
         cancel_ticket()
     else: 
         print("Invalid choice.")
+
 
     print("\n")
